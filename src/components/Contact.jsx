@@ -1,1 +1,15 @@
-function Contact() { return ( <section id="contact"> <h2>Contact Me</h2> <p>Let's connect and build something together.</p> <div> <a href="mailto:your@email.com"> <button>Email Me</button> </a> <a href="https://github.com/" target="_blank"> <button>GitHub</button> </a> <a href="https://www.linkedin.com/" target="_blank"> <button>LinkedIn</button> </a> </div> </section> ) } export default Contact
+function Contact() { 
+    return (
+         <section id="contact">
+             <h2>Contact Me</h2> 
+             <p>Let's connect and build something together.</p> 
+             <div> <a href="mailto:your@email.com">
+                 <button>Email Me</button>
+                  </a> <a href="https://github.com/" target="_blank">
+                   <button>GitHub</button>
+                    </a> <a href="https://www.linkedin.com/" target="_blank">
+                     <button>LinkedIn</button> 
+                     </a>
+                      </div> 
+                      </section> ) } 
+export default Contact
