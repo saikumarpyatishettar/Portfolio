@@ -1,19 +1,30 @@
 function Skills() {
-    return (
-        <section id="skills">
-            <h2>My Skills</h2>
+    const skills = [
+        "C++",
+        "Java",
+        "Python",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB"
+    ]
 
-            <ul>
-                <li>C++</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-            </ul>
+    return (
+        <section id="skills" className="skills">
+            <div className="section-title">
+                <p>MY TECHNOLOGIES</p>
+                <h2>Skills</h2>
+            </div>
+
+            <div className="skills-grid">
+                {skills.map((skill) => (
+                    <div className="skill-card" key={skill}>
+                        {skill}
+                    </div>
+                ))}
+            </div>
         </section>
     )
 }

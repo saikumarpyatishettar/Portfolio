@@ -1,7 +1,9 @@
 function Footer() {
     return (
-        <footer>
-            <p>© 2026 Sai Kumar. All Rights Reserved.</p>
+        <footer className="footer">
+            <p>
+                © 2026 Sai Kumar. All Rights Reserved.
+            </p>
         </footer>
     )
 }

@@ -1,9 +1,9 @@
 function Navbar() {
     return (
-        <nav>
-            <h2>Sai Kumar</h2>
+        <nav className="navbar">
+            <h2 className="logo">Sai Kumar</h2>
 
-            <div>
+            <div className="nav-links">
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
