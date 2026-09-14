@@ -1,48 +1,62 @@
 function Projects() {
     const projects = [
         {
-            title: "Energy Consumption Tracker",
+            title: "WORLD-OF-SNAKES",
             description:
-                "A web application designed to help households monitor and understand their energy consumption.",
-            technologies: "HTML • CSS • JavaScript",
-            github: "https://github.com/",
-            demo: "#"
+                "A futuristic Snake game built with Python & Pygame, featuring power-ups, levels, particles, and a live browser demo.",
+            technologies: ["Python", "Pygame", "Pybag"],
+            github: "https://github.com/saikumarpyatishettar/world-of-snakes",
+            demo: "https://saikumarpyatishettar.github.io/world-of-snakes/"
         },
         {
-            title: "Smart Campus Information System",
+            title: "Amazon-Clone",
             description:
-                "A system designed to provide useful campus information and services for students.",
-            technologies: "React • Node.js • MongoDB",
-            github: "https://github.com/",
-            demo: "#"
+                "My first web development project — an Amazon homepage clone built using HTML, CSS, and Font Awesome to practice frontend development fundamentals.",
+            technologies: ["HTML", "CSS"],
+            github: "https://github.com/saikumarpyatishettar/Amazon-clone-html-css",
+            demo: "https://saikumarpyatishettar.github.io/Amazon-clone-html-css/"
         },
         {
             title: "Fire Fighting Robot",
             description:
                 "A robotics project that uses sensors and a control system to detect and respond to fire.",
-            technologies: "Arduino • Sensors • C++",
-            github: "https://github.com/",
-            demo: "#"
+            technologies: ["Arduino", "Sensors", "C++"],
+            // github: "https://github.com/",
+            // demo: "#"
         }
     ]
 
     return (
         <section id="projects" className="projects">
+
             <div className="section-title">
                 <p>MY WORK</p>
                 <h2>Projects</h2>
             </div>
 
             <div className="projects-grid">
+
                 {projects.map((project) => (
                     <div className="project-card" key={project.title}>
+
+                        <div className="project-number">
+                            0{projects.indexOf(project) + 1}
+                        </div>
+
                         <h3>{project.title}</h3>
 
                         <p>{project.description}</p>
 
-                        <span>{project.technologies}</span>
+                        <div className="project-tech">
+                            {project.technologies.map((technology) => (
+                                <span key={technology}>
+                                    {technology}
+                                </span>
+                            ))}
+                        </div>
 
                         <div className="project-buttons">
+
                             <a
                                 href={project.github}
                                 target="_blank"
@@ -58,10 +72,14 @@ function Projects() {
                             >
                                 Live Demo
                             </a>
+
                         </div>
+
                     </div>
                 ))}
+
             </div>
+
         </section>
     )
 }
