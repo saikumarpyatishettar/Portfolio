@@ -1,16 +1,43 @@
+import {
+    SiCplusplus,
+    SiPython,
+    SiHtml5,
+    SiJavascript,
+    SiReact,
+    SiNodedotjs,
+    SiExpress,
+    SiMongodb
+} from "react-icons/si"
+
 function Skills() {
     const skillCategories = [
         {
             title: "Programming",
-            skills: ["C++", "Java", "Python"]
+            description: "Languages I use for problem solving and development.",
+            skills: [
+                { name: "C++", icon: <SiCplusplus /> },
+                { name: "Python", icon: <SiPython /> },
+                { name: "Java", icon: "☕" }
+            ]
         },
         {
-            title: "Web Development",
-            skills: ["HTML", "CSS", "JavaScript", "React", "Node.js"]
+            title: "Frontend",
+            description: "Technologies I use to build responsive web interfaces.",
+            skills: [
+                { name: "HTML", icon: <SiHtml5 /> },
+                { name: "CSS", icon: "CSS" },
+                { name: "JavaScript", icon: <SiJavascript /> },
+                { name: "React", icon: <SiReact /> }
+            ]
         },
         {
-            title: "Database",
-            skills: ["MongoDB"]
+            title: "Backend & Database",
+            description: "Technologies I use for full-stack development.",
+            skills: [
+                { name: "Node.js", icon: <SiNodedotjs /> },
+                { name: "Express", icon: <SiExpress /> },
+                { name: "MongoDB", icon: <SiMongodb /> }
+            ]
         }
     ]
 
@@ -19,22 +46,45 @@ function Skills() {
 
             <div className="section-title">
                 <p>MY TECHNOLOGIES</p>
-                <h2>Skills</h2>
+                <h2>Tech Stack</h2>
+
+                <span className="section-description">
+                    Technologies and tools I use while building projects
+                    and improving my development skills.
+                </span>
             </div>
 
             <div className="skills-categories">
 
                 {skillCategories.map((category) => (
-                    <div className="skill-category" key={category.title}>
+                    <div
+                        className="skill-category"
+                        key={category.title}
+                    >
 
                         <h3>{category.title}</h3>
 
+                        <p className="skill-description">
+                            {category.description}
+                        </p>
+
                         <div className="skills-list">
+
                             {category.skills.map((skill) => (
-                                <span className="skill-tag" key={skill}>
-                                    {skill}
-                                </span>
+                                <div
+                                    className="skill-item"
+                                    key={skill.name}
+                                >
+                                    <div className="skill-icon">
+                                        {skill.icon}
+                                    </div>
+
+                                    <span>
+                                        {skill.name}
+                                    </span>
+                                </div>
                             ))}
+
                         </div>
 
                     </div>

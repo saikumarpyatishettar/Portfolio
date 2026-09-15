@@ -16,19 +16,33 @@ function Hero() {
                 </h2>
 
                 <p className="hero-description">
-                    I build web applications, solve Data Structures
-                    and Algorithms problems, and continuously explore
-                    new technologies.
+                    I build web applications, practice Data Structures
+                    and Algorithms, and explore modern software
+                    development technologies.
                 </p>
 
                 <div className="hero-buttons">
+
                     <a href="#projects">
                         View Projects
                     </a>
 
-                    <a href="#contact" className="secondary-button">
+                    <a
+                        href="#contact"
+                        className="secondary-button"
+                    >
                         Contact Me
                     </a>
+
+                    <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="resume-button"
+                    >
+                        View Resume
+                    </a>
+
                 </div>
 
             </div>

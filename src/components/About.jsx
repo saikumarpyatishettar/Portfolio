@@ -1,38 +1,63 @@
 function About() {
     return (
         <section id="about" className="about">
+
             <div className="section-title">
                 <p>GET TO KNOW ME</p>
                 <h2>About Me</h2>
             </div>
 
             <div className="about-content">
+
                 <div className="about-text">
+
+                    <h3>
+                        Building my foundation in software development.
+                    </h3>
+
                     <p>
                         I am a Computer Science Engineering student
-                        passionate about software development and technology.
+                        interested in software development and
+                        problem solving.
                     </p>
 
                     <p>
-                        I am currently learning Data Structures and Algorithms,
-                        Full Stack Development, and modern programming
-                        technologies.
+                        Currently, I am focusing on Data Structures and
+                        Algorithms, Full Stack Development, and building
+                        practical projects to strengthen my technical skills.
                     </p>
 
                     <p>
-                        My goal is to build useful software projects and
-                        continuously improve my problem-solving skills.
+                        I enjoy learning new technologies, working on
+                        projects, and continuously improving my ability
+                        to turn ideas into useful software.
                     </p>
+
                 </div>
 
                 <div className="about-card">
-                    <h3>What I Do</h3>
 
-                    <p>💻 Full Stack Development</p>
-                    <p>🧠 Data Structures & Algorithms</p>
-                    <p>🚀 Software Projects</p>
+                    <h3>Current Focus</h3>
+
+                    <div className="focus-item">
+                        <span>01</span>
+                        <p>Data Structures & Algorithms</p>
+                    </div>
+
+                    <div className="focus-item">
+                        <span>02</span>
+                        <p>Full Stack Development</p>
+                    </div>
+
+                    <div className="focus-item">
+                        <span>03</span>
+                        <p>Building Real Projects</p>
+                    </div>
+
                 </div>
+
             </div>
+
         </section>
     )
 }
