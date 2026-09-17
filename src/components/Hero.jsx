@@ -3,13 +3,14 @@ function Hero() {
         <section id="home" className="hero">
             <div className="hero-content">
 
-                <p className="hero-small">
-                    HELLO, I'M
-                </p>
+                <div className="hero-status">
+                    <span className="status-dot"></span>
+                    Open to learning & building
+                </div>
 
-                <h1>
-                    Sai Kumar
-                </h1>
+                <p className="hero-small">HELLO, I'M</p>
+
+                <h1>Sai Kumar</h1>
 
                 <h2>
                     Computer Science Engineering Student
@@ -21,8 +22,11 @@ function Hero() {
                     development technologies.
                 </p>
 
-                <div className="hero-buttons">
+                <p className="hero-focus">
+                    Web Development • DSA • Software Development
+                </p>
 
+                <div className="hero-buttons">
                     <a href="#projects">
                         View Projects
                     </a>
@@ -42,7 +46,6 @@ function Hero() {
                     >
                         View Resume
                     </a>
-
                 </div>
 
             </div>

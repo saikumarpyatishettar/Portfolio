@@ -118,24 +118,24 @@ function Projects() {
                         </div>
 
                         <div className="project-buttons">
+    <a
+        href={project.github}
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        GitHub
+    </a>
 
-                            <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
-
-                            <a
-                                href={project.demo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                Live Demo
-                            </a>
-
-                        </div>
+    {project.demo !== "#" && (
+        <a
+            href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            Live Demo
+        </a>
+    )}
+</div>
 
                     </div>
                 ))}
