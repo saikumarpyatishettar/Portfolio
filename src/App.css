@@ -14,6 +14,29 @@ body {
     color: #f8fafc;
     line-height: 1.6;
 }
+@property --accent {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #38bdf8;
+}
+
+@property --accent-secondary {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: #06b6d4;
+}
+
+:root {
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --bg-card: #111827;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --accent: #38bdf8;
+    --accent-secondary: #06b6d4;
+}
 
 a {
     text-decoration: none;
@@ -1333,4 +1356,202 @@ section {
 .education-focus span:hover {
     border-color: #38bdf8;
     color: #38bdf8;
+}
+.hero-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 10px;
+}
+
+.hero-name-row h1 {
+    margin-bottom: 0;
+}
+
+.hero-photo {
+    position: relative;
+
+    width: 105px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    border: 2px solid #38bdf8;
+
+    border-radius: 50%;
+
+    padding: 4px;
+
+    background: #0f172a;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 0 15px rgba(56, 189, 248, 0.5),
+        0 0 35px rgba(99, 102, 241, 0.3);
+
+    animation: portraitColor 10s linear infinite;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+@keyframes portraitColor {
+    0% {
+        border-color: #38bdf8;
+
+        box-shadow:
+            0 0 15px rgba(56, 189, 248, 0.6),
+            0 0 40px rgba(56, 189, 248, 0.25);
+    }
+
+    25% {
+        border-color: #6366f1;
+
+        box-shadow:
+            0 0 15px rgba(99, 102, 241, 0.6),
+            0 0 40px rgba(99, 102, 241, 0.25);
+    }
+
+    50% {
+        border-color: #a855f7;
+
+        box-shadow:
+            0 0 15px rgba(168, 85, 247, 0.6),
+            0 0 40px rgba(168, 85, 247, 0.25);
+    }
+
+    75% {
+        border-color: #ec4899;
+
+        box-shadow:
+            0 0 15px rgba(236, 72, 153, 0.6),
+            0 0 40px rgba(236, 72, 153, 0.25);
+    }
+
+    100% {
+        border-color: #38bdf8;
+
+        box-shadow:
+            0 0 15px rgba(56, 189, 248, 0.6),
+            0 0 40px rgba(56, 189, 248, 0.25);
+    }
+}
+
+
+:root {
+    --bg-primary: #020617;
+    --bg-secondary: #0f172a;
+    --bg-card: #1e293b;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --accent: #38bdf8;
+    --accent-secondary: #06b6d4;
+}
+
+@keyframes colorFlow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    25% {
+        filter: hue-rotate(45deg);
+    }
+
+    50% {
+        filter: hue-rotate(100deg);
+    }
+
+    75% {
+        filter: hue-rotate(180deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    top: -250px;
+    left: 50%;
+
+    width: 700px;
+    height: 700px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.18),
+            rgba(99, 102, 241, 0.12),
+            rgba(168, 85, 247, 0.08),
+            transparent 70%
+        );
+
+    filter: blur(40px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    animation: colorFlow 12s linear infinite;
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    left: 50%;
+    top: 30%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 189, 248, 0.16),
+            rgba(139, 92, 246, 0.10),
+            transparent 70%
+        );
+
+    filter: blur(50px);
+
+    pointer-events: none;
+
+    animation: colorFlow 10s linear infinite;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
 }

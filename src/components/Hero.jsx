@@ -10,7 +10,16 @@ function Hero() {
 
                 <p className="hero-small">HELLO, I'M</p>
 
-                <h1>Sai Kumar</h1>
+                <div className="hero-name-row">
+                    <h1>Sai Kumar</h1>
+
+                    <div className="hero-photo">
+                        <img
+                            src="/profile.png"
+                            alt="Sai Kumar"
+                        />
+                    </div>
+                </div>
 
                 <h2>
                     Computer Science Engineering Student
@@ -27,9 +36,7 @@ function Hero() {
                 </p>
 
                 <div className="hero-buttons">
-                    <a href="#projects">
-                        View Projects
-                    </a>
+                    <a href="#projects">View Projects</a>
 
                     <a
                         href="#contact"
