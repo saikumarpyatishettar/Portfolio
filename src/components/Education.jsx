@@ -5,6 +5,10 @@ function Education() {
             <div className="section-title">
                 <p>MY JOURNEY</p>
                 <h2>Education</h2>
+
+                <span className="section-description">
+                    My academic journey and current area of study.
+                </span>
             </div>
 
             <div className="education-timeline">
@@ -21,7 +25,13 @@ function Education() {
 
                     <div className="education-content">
 
-                        <h3>B.E. Computer Science Engineering</h3>
+                        <div className="education-status">
+                            Currently Pursuing
+                        </div>
+
+                        <h3>
+                            B.E. Computer Science Engineering
+                        </h3>
 
                         <h4>
                             Dayananda Sagar College of Engineering
@@ -29,10 +39,20 @@ function Education() {
 
                         <p>
                             Currently pursuing my Bachelor's degree in
-                            Computer Science Engineering, building a strong
-                            foundation in programming, Data Structures and
-                            Algorithms, web development, and software engineering.
+                            Computer Science Engineering and building a
+                            strong foundation in programming, Data Structures
+                            and Algorithms, web development, and software
+                            engineering.
                         </p>
+
+                        <div className="education-focus">
+
+                            <span>Programming</span>
+                            <span>DSA</span>
+                            <span>Web Development</span>
+                            <span>Software Engineering</span>
+
+                        </div>
 
                     </div>
 

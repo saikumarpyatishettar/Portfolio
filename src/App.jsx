@@ -7,47 +7,44 @@ import Projects from "./components/Projects"
 import Education from "./components/Education"
 import Achievements from "./components/Achievements"
 import Contact from "./components/Contact"
-
 import ScrollToTop from "./components/ScrollToTop"
 import Reveal from "./components/Reveal"
 import Footer from "./components/Footer"
+
 function App() {
     return (
         <>
             <Navbar />
+
             <Hero />
-            <About />
-            <Skills />
-            <Projects />
-            <Education />
-            <Achievements />
-            <Contact />
-            
-            <ScrollToTop />
+
             <Reveal>
-                <Footer />
-    <About />
-</Reveal>
+                <About />
+            </Reveal>
 
-<Reveal>
-    <Skills />
-</Reveal>
+            <Reveal>
+                <Skills />
+            </Reveal>
 
-<Reveal>
-    <Projects />
-</Reveal>
+            <Reveal>
+                <Projects />
+            </Reveal>
 
-<Reveal>
-    <Education />
-</Reveal>
+            <Reveal>
+                <Education />
+            </Reveal>
 
-<Reveal>
-    <Achievements />
-</Reveal>
+            <Reveal>
+                <Achievements />
+            </Reveal>
 
-<Reveal>
-    <Contact />
-</Reveal>
+            <Reveal>
+                <Contact />
+            </Reveal>
+
+            <Footer />
+
+            <ScrollToTop />
         </>
     )
 }

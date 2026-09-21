@@ -12,6 +12,7 @@ function Projects() {
         {
             number: "01",
             title: "Energy Consumption Tracker",
+            category: "Web Development",
             description:
                 "A web application designed to help households monitor and understand their energy consumption.",
             image: "/projects/energy-tracker.png",
@@ -21,11 +22,12 @@ function Projects() {
                 { name: "JavaScript", icon: <SiJavascript /> }
             ],
             github: "https://github.com/",
-            demo: "#"
+            demo: null
         },
         {
             number: "02",
             title: "Smart Campus Information System",
+            category: "Full Stack",
             description:
                 "A system designed to provide useful campus information and services for students.",
             image: "/projects/smart-campus.png",
@@ -40,6 +42,7 @@ function Projects() {
         {
             number: "03",
             title: "World of Snakes",
+            category: "Game Development",
             description:
                 "A browser-based snake game built with Python and Pygame, featuring a futuristic interface and interactive gameplay.",
             image: "/projects/world-of-snakes.png",
@@ -49,7 +52,7 @@ function Projects() {
                 { name: "JavaScript", icon: <SiJavascript /> }
             ],
             github:
-                "https://github.com/saikumarpyatishettyar/world-of-snakes",
+                "https://github.com/saikumarpyatishettar/world-of-snakes",
             demo: null
         }
     ]
@@ -93,6 +96,10 @@ function Projects() {
                             {project.number}
                         </div>
 
+                        <span className="project-category">
+                            {project.category}
+                        </span>
+
                         <h3>
                             {project.title}
                         </h3>
@@ -118,24 +125,26 @@ function Projects() {
                         </div>
 
                         <div className="project-buttons">
-    <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        GitHub
-    </a>
 
-    {project.demo !== "#" && (
-        <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            Live Demo
-        </a>
-    )}
-</div>
+                            <a
+                                href={project.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub
+                            </a>
+
+                            {project.demo && (
+                                <a
+                                    href={project.demo}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Live Demo
+                                </a>
+                            )}
+
+                        </div>
 
                     </div>
                 ))}

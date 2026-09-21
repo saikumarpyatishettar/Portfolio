@@ -12,8 +12,9 @@ import {
 function Skills() {
     const skillCategories = [
         {
-            title: "Programming",
+           title: "Programming",
             description: "Languages I use for problem solving and development.",
+            focus: "Core Fundamentals",
             skills: [
                 { name: "C++", icon: <SiCplusplus /> },
                 { name: "Python", icon: <SiPython /> },
@@ -23,6 +24,7 @@ function Skills() {
         {
             title: "Frontend",
             description: "Technologies I use to build responsive web interfaces.",
+            focus:"Web Development",
             skills: [
                 { name: "HTML", icon: <SiHtml5 /> },
                 { name: "CSS", icon: "CSS" },
@@ -33,6 +35,7 @@ function Skills() {
         {
             title: "Backend & Database",
             description: "Technologies I use for full-stack development.",
+            focus:"Full Stack",
             skills: [
                 { name: "Node.js", icon: <SiNodedotjs /> },
                 { name: "Express", icon: <SiExpress /> },
@@ -63,7 +66,9 @@ function Skills() {
                     >
 
                         <h3>{category.title}</h3>
-
+                        <span className="skill-focus">
+                            {category.focus}
+                        </span>
                         <p className="skill-description">
                             {category.description}
                         </p>

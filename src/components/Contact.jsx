@@ -1,22 +1,35 @@
+import {
+    FaGithub,
+    FaLinkedin,
+    FaEnvelope
+} from "react-icons/fa"
+
+
 function Contact() {
     return (
         <section id="contact" className="contact">
 
             <div className="section-title">
                 <p>GET IN TOUCH</p>
-                <h2>Contact Me</h2>
+                <h2>Let's Connect</h2>
+
+                <span className="section-description">
+                    Interested in working together, discussing a project,
+                    or simply connecting? Feel free to reach out.
+                </span>
             </div>
 
             <div className="contact-content">
 
                 <p>
-                    Have a project idea or want to connect?
-                    Feel free to reach out to me.
+                    I'm always interested in learning, building projects,
+                    and connecting with other developers and students.
                 </p>
 
                 <div className="contact-buttons">
 
                     <a href="mailto:saikumarpyatishettar@gmail.com">
+                        <FaEnvelope/>
                         Email
                     </a>
 
@@ -25,6 +38,7 @@ function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <FaGithub/>
                         GitHub
                     </a>
 
@@ -33,6 +47,7 @@ function Contact() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
+                        <FaLinkedin/>
                         LinkedIn
                     </a>
 
