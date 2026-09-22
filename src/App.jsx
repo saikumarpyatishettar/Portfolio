@@ -10,12 +10,13 @@ import Contact from "./components/Contact"
 import ScrollToTop from "./components/ScrollToTop"
 import Reveal from "./components/Reveal"
 import Footer from "./components/Footer"
+import CursorSpark from "./components/CursorSpark"
 
 function App() {
     return (
         <>
             <Navbar />
-
+            <CursorSpark />
             <Hero />
 
             <Reveal>

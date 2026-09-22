@@ -62,91 +62,100 @@ function Projects() {
 
             <div className="section-title">
                 <p>MY WORK</p>
-
-                <h2>Projects</h2>
-
+                <h2>Featured Projects</h2>
                 <span className="section-description">
-                    Projects I have built while learning and exploring
-                    software development.
+                    A selection of projects I've built while learning
+                    and exploring software development.
                 </span>
             </div>
 
-            <div className="projects-grid">
+            <div className="projects-list">
 
-                {projects.map((project) => (
-                    <div
-                        className="project-card"
+                {projects.map((project, index) => (
+                    <article
+                        className={`project-showcase ${
+                            index % 2 !== 0
+                                ? "project-reverse"
+                                : ""
+                        }`}
                         key={project.number}
                     >
 
-                        <div className="project-preview">
+                        <div className="project-image">
+
+                            <div className="project-image-number">
+                                {project.number}
+                            </div>
 
                             <img
                                 src={project.image}
                                 alt={project.title}
                             />
 
-                            <div className="project-overlay">
-                                <span>View Project</span>
+                            <div className="project-image-overlay">
+                                <span>PROJECT {project.number}</span>
                             </div>
 
                         </div>
 
-                        <div className="project-number">
-                            {project.number}
-                        </div>
+                        <div className="project-info">
 
-                        <span className="project-category">
-                            {project.category}
-                        </span>
+                            <span className="project-category">
+                                {project.category}
+                            </span>
 
-                        <h3>
-                            {project.title}
-                        </h3>
+                            <h3>{project.title}</h3>
 
-                        <p>
-                            {project.description}
-                        </p>
+                            <p>
+                                {project.description}
+                            </p>
 
-                        <div className="project-tech">
+                            <div className="project-tech">
 
-                            {project.technologies.map((technology) => (
-                                <span key={technology.name}>
+                                {project.technologies.map(
+                                    (technology) => (
+                                        <span
+                                            key={technology.name}
+                                        >
+                                            <span className="project-tech-icon">
+                                                {technology.icon}
+                                            </span>
 
-                                    <span className="project-tech-icon">
-                                        {technology.icon}
-                                    </span>
+                                            {technology.name}
+                                        </span>
+                                    )
+                                )}
 
-                                    {technology.name}
+                            </div>
 
-                                </span>
-                            ))}
+                            <div className="project-actions">
 
-                        </div>
-
-                        <div className="project-buttons">
-
-                            <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                GitHub
-                            </a>
-
-                            {project.demo && (
                                 <a
-                                    href={project.demo}
+                                    href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    className="project-github"
                                 >
-                                    Live Demo
+                                    View on GitHub
+                                    <span>↗</span>
                                 </a>
-                            )}
+
+                                {project.demo && (
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="project-demo"
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
+
+                            </div>
 
                         </div>
 
-                    </div>
+                    </article>
                 ))}
 
             </div>

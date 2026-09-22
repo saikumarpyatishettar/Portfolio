@@ -5,59 +5,85 @@ function About() {
             <div className="section-title">
                 <p>ABOUT ME</p>
                 <h2>Who I Am</h2>
-
                 <span className="section-description">
-                    A little about my journey and what I'm currently focused on.
+                    A little about my journey, interests, and what I'm
+                    currently working toward.
                 </span>
             </div>
 
-            <div className="about-content">
+            <div className="about-container">
 
-                <div className="about-text">
+                <div className="about-main">
 
-                    <h3>Building my foundation in Computer Science</h3>
+                    <div className="about-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Building my foundation in
+                        <span> Computer Science</span>
+                    </h3>
 
                     <p>
-                        I'm a Computer Science Engineering student interested
-                        in software development and problem solving.
+                        I'm a Computer Science Engineering student
+                        interested in software development, problem solving,
+                        and building practical projects.
                     </p>
 
                     <p>
-                        I'm currently strengthening my programming fundamentals,
-                        practicing Data Structures and Algorithms, and building
-                        web development projects to gain practical experience.
+                        I'm currently strengthening my programming
+                        fundamentals, practicing Data Structures and
+                        Algorithms, and developing full-stack web
+                        applications to gain hands-on experience.
                     </p>
 
                     <p>
-                        My goal is to continuously learn, build useful projects,
-                        and develop strong technical skills through consistent
-                        practice.
+                        My approach is simple — learn consistently,
+                        build real things, understand how they work,
+                        and keep improving.
                     </p>
+
+                    <div className="about-tags">
+                        <span>Problem Solving</span>
+                        <span>Continuous Learning</span>
+                        <span>Building Projects</span>
+                    </div>
 
                 </div>
 
-                <div className="about-card">
+                <div className="about-side">
 
-                    <h3>Current Focus</h3>
+                    <div className="about-card">
+                        <div className="about-card-icon">
+                            &lt;/&gt;
+                        </div>
 
-                    <div className="focus-item">
-                        <span>01</span>
-                        <p>Data Structures & Algorithms</p>
+                        <div>
+                            <span>Currently Learning</span>
+                            <h4>Full Stack Development</h4>
+                        </div>
                     </div>
 
-                    <div className="focus-item">
-                        <span>02</span>
-                        <p>Full Stack Web Development</p>
+                    <div className="about-card">
+                        <div className="about-card-icon">
+                            #01
+                        </div>
+
+                        <div>
+                            <span>Problem Solving</span>
+                            <h4>Data Structures & Algorithms</h4>
+                        </div>
                     </div>
 
-                    <div className="focus-item">
-                        <span>03</span>
-                        <p>Building Real Projects</p>
-                    </div>
+                    <div className="about-card">
+                        <div className="about-card-icon">
+                            ⚡
+                        </div>
 
-                    <div className="focus-item">
-                        <span>04</span>
-                        <p>Learning Modern Technologies</p>
+                        <div>
+                            <span>Approach</span>
+                            <h4>Learn • Build • Improve</h4>
+                        </div>
                     </div>
 
                 </div>

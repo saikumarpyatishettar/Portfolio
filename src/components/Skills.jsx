@@ -12,9 +12,10 @@ import {
 function Skills() {
     const skillCategories = [
         {
-           title: "Programming",
-            description: "Languages I use for problem solving and development.",
-            focus: "Core Fundamentals",
+            number: "01",
+            title: "Programming",
+            description:
+                "Languages I use for problem solving, DSA practice, and development.",
             skills: [
                 { name: "C++", icon: <SiCplusplus /> },
                 { name: "Python", icon: <SiPython /> },
@@ -22,9 +23,10 @@ function Skills() {
             ]
         },
         {
+            number: "02",
             title: "Frontend",
-            description: "Technologies I use to build responsive web interfaces.",
-            focus:"Web Development",
+            description:
+                "Technologies I use to create responsive and interactive interfaces.",
             skills: [
                 { name: "HTML", icon: <SiHtml5 /> },
                 { name: "CSS", icon: "CSS" },
@@ -33,9 +35,10 @@ function Skills() {
             ]
         },
         {
+            number: "03",
             title: "Backend & Database",
-            description: "Technologies I use for full-stack development.",
-            focus:"Full Stack",
+            description:
+                "Technologies I use while building full-stack applications.",
             skills: [
                 { name: "Node.js", icon: <SiNodedotjs /> },
                 { name: "Express", icon: <SiExpress /> },
@@ -50,25 +53,30 @@ function Skills() {
             <div className="section-title">
                 <p>MY TECHNOLOGIES</p>
                 <h2>Tech Stack</h2>
-
                 <span className="section-description">
-                    Technologies and tools I use while building projects
-                    and improving my development skills.
+                    Technologies I use while learning, experimenting,
+                    and building projects.
                 </span>
             </div>
 
-            <div className="skills-categories">
+            <div className="skills-grid">
 
                 {skillCategories.map((category) => (
                     <div
                         className="skill-category"
-                        key={category.title}
+                        key={category.number}
                     >
 
+                        <div className="skill-category-top">
+                            <span className="skill-number">
+                                {category.number}
+                            </span>
+
+                            <span className="skill-line"></span>
+                        </div>
+
                         <h3>{category.title}</h3>
-                        <span className="skill-focus">
-                            {category.focus}
-                        </span>
+
                         <p className="skill-description">
                             {category.description}
                         </p>
@@ -84,8 +92,10 @@ function Skills() {
                                         {skill.icon}
                                     </div>
 
-                                    <span>
-                                        {skill.name}
+                                    <span>{skill.name}</span>
+
+                                    <span className="skill-arrow">
+                                        ↗
                                     </span>
                                 </div>
                             ))}
