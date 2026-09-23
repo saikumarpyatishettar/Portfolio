@@ -1,3 +1,4 @@
+import CalmParticles from "./components/CalmParticles"
 import "./App.css"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
@@ -10,13 +11,12 @@ import Contact from "./components/Contact"
 import ScrollToTop from "./components/ScrollToTop"
 import Reveal from "./components/Reveal"
 import Footer from "./components/Footer"
-import CursorSpark from "./components/CursorSpark"
 
 function App() {
     return (
         <>
             <Navbar />
-            <CursorSpark />
+            <CalmParticles />
             <Hero />
 
             <Reveal>
