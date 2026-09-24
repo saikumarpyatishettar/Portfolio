@@ -1,3 +1,4 @@
+import { useState } from "react"
 import {
     SiHtml5,
     SiJavascript,
@@ -8,6 +9,8 @@ import {
 } from "react-icons/si"
 
 function Projects() {
+    const [selectedProject, setSelectedProject] = useState(null)
+
     const projects = [
         {
             number: "01",
@@ -81,22 +84,28 @@ function Projects() {
                         key={project.number}
                     >
 
-                        <div className="project-image">
+                        <button
+                            className="project-click-area"
+                            onClick={() => setSelectedProject(project)}
+                            aria-label={`View ${project.title} details`}
+                        >
+                            <div className="project-image">
 
-                            <div className="project-image-number">
-                                {project.number}
+                                <div className="project-image-number">
+                                    {project.number}
+                                </div>
+
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                />
+
+                                <div className="project-image-overlay">
+                                    <span>VIEW PROJECT</span>
+                                </div>
+
                             </div>
-
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                            />
-
-                            <div className="project-image-overlay">
-                                <span>PROJECT {project.number}</span>
-                            </div>
-
-                        </div>
+                        </button>
 
                         <div className="project-info">
 
@@ -106,21 +115,16 @@ function Projects() {
 
                             <h3>{project.title}</h3>
 
-                            <p>
-                                {project.description}
-                            </p>
+                            <p>{project.description}</p>
 
                             <div className="project-tech">
 
                                 {project.technologies.map(
                                     (technology) => (
-                                        <span
-                                            key={technology.name}
-                                        >
+                                        <span key={technology.name}>
                                             <span className="project-tech-icon">
                                                 {technology.icon}
                                             </span>
-
                                             {technology.name}
                                         </span>
                                     )
@@ -130,26 +134,25 @@ function Projects() {
 
                             <div className="project-actions">
 
+                                <button
+                                    className="project-details-button"
+                                    onClick={() =>
+                                        setSelectedProject(project)
+                                    }
+                                >
+                                    View Details
+                                    <span>↗</span>
+                                </button>
+
                                 <a
                                     href={project.github}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="project-github"
                                 >
-                                    View on GitHub
+                                    GitHub
                                     <span>↗</span>
                                 </a>
-
-                                {project.demo && (
-                                    <a
-                                        href={project.demo}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="project-demo"
-                                    >
-                                        Live Demo
-                                    </a>
-                                )}
 
                             </div>
 
@@ -159,6 +162,63 @@ function Projects() {
                 ))}
 
             </div>
+
+            {selectedProject && (
+                <div
+                    className="project-modal"
+                    onClick={() => setSelectedProject(null)}
+                >
+                    <div
+                        className="project-modal-content"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <button
+                            className="project-modal-close"
+                            onClick={() => setSelectedProject(null)}
+                            aria-label="Close project details"
+                        >
+                            ×
+                        </button>
+
+                        <img
+                            src={selectedProject.image}
+                            alt={selectedProject.title}
+                        />
+
+                        <div className="project-modal-body">
+
+                            <span>
+                                {selectedProject.category}
+                            </span>
+
+                            <h3>{selectedProject.title}</h3>
+
+                            <p>{selectedProject.description}</p>
+
+                            <div className="project-modal-tech">
+                                {selectedProject.technologies.map(
+                                    (technology) => (
+                                        <span key={technology.name}>
+                                            {technology.icon}
+                                            {technology.name}
+                                        </span>
+                                    )
+                                )}
+                            </div>
+
+                            <a
+                                href={selectedProject.github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="project-modal-github"
+                            >
+                                View on GitHub ↗
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            )}
 
         </section>
     )

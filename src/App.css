@@ -3262,3 +3262,582 @@ body::before {
     display: block;
     transform: translateZ(15px);
 }
+.hero-buttons a {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.hero-buttons a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.16),
+        transparent
+    );
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+}
+
+.hero-buttons a:hover::before {
+    left: 140%;
+}
+
+.hero-buttons a:hover {
+    transform: translateY(-4px);
+}
+
+.primary-button:hover {
+    box-shadow:
+        0 10px 30px rgba(56, 189, 248, 0.25);
+}
+
+.secondary-button:hover,
+.resume-button:hover {
+    border-color: #38bdf8;
+    box-shadow:
+        0 8px 25px rgba(56, 189, 248, 0.12);
+}
+
+.hero-buttons a span {
+    transition: transform 0.3s ease;
+}
+
+.hero-buttons a:hover span {
+    transform: translate(3px, -3px);
+}
+.nav-links a {
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    border-radius: 10px;
+    background: #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+.navbar {
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.navbar:hover {
+    border-bottom-color: rgba(56, 189, 248, 0.25);
+    box-shadow: 0 4px 25px rgba(56, 189, 248, 0.05);
+}
+.skill-category {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.skill-category::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.12),
+        transparent 70%
+    );
+    pointer-events: none;
+    transition: transform 0.5s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(56, 189, 248, 0.06);
+}
+
+.skill-category:hover::before {
+    transform: scale(1.4);
+}
+
+.skill-item {
+    position: relative;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateX(6px);
+    border-color: rgba(56, 189, 248, 0.45);
+    background-color: rgba(56, 189, 248, 0.05);
+}
+
+.skill-icon {
+    transition:
+        transform 0.35s ease,
+        color 0.35s ease;
+}
+
+.skill-item:hover .skill-icon {
+    transform: scale(1.15) rotate(-5deg);
+    color: #38bdf8;
+}
+
+.skill-arrow {
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.skill-item:hover .skill-arrow {
+    transform: translate(4px, -4px);
+    color: #38bdf8;
+}
+
+.skill-line {
+    transition:
+        width 0.4s ease,
+        background-color 0.4s ease;
+}
+
+.skill-category:hover .skill-line {
+    background-color: #38bdf8;
+}
+.project-showcase {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-showcase::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: -140px;
+    right: -140px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.12),
+        transparent 70%
+    );
+    pointer-events: none;
+    transition: transform 0.6s ease;
+}
+
+.project-showcase:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(56, 189, 248, 0.06);
+}
+
+.project-showcase:hover::before {
+    transform: scale(1.5);
+}
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image img {
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.project-showcase:hover .project-image img {
+    transform: scale(1.06);
+    filter: brightness(1.08);
+}
+
+.project-image-overlay {
+    transition:
+        opacity 0.4s ease,
+        backdrop-filter 0.4s ease;
+}
+
+.project-showcase:hover .project-image-overlay {
+    backdrop-filter: blur(3px);
+}
+
+.project-image-number {
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.project-showcase:hover .project-image-number {
+    transform: translateY(-5px);
+}
+
+.project-category {
+    transition:
+        color 0.3s ease,
+        letter-spacing 0.3s ease;
+}
+
+.project-showcase:hover .project-category {
+    color: #38bdf8;
+    letter-spacing: 1.5px;
+}
+
+.project-tech > span {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.project-tech > span:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.45);
+    background-color: rgba(56, 189, 248, 0.06);
+}
+
+.project-github,
+.project-demo {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-github:hover,
+.project-demo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.12);
+}
+.project-click-area {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.project-details-button {
+    padding: 11px 18px;
+    border: 1px solid #334155;
+    border-radius: 7px;
+    background: transparent;
+    color: #cbd5e1;
+    cursor: pointer;
+    font: inherit;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.project-details-button:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+.project-details-button span {
+    margin-left: 8px;
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: rgba(2, 6, 23, 0.82);
+    backdrop-filter: blur(12px);
+    animation: modalFadeIn 0.3s ease;
+}
+
+.project-modal-content {
+    position: relative;
+    width: min(850px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    border: 1px solid #334155;
+    border-radius: 18px;
+    background: #0f172a;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+    animation: modalSlideUp 0.35s ease;
+}
+
+.project-modal-content > img {
+    width: 100%;
+    height: 300px;
+    display: block;
+    object-fit: cover;
+}
+
+.project-modal-body {
+    padding: 32px;
+}
+
+.project-modal-body > span {
+    color: #38bdf8;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.project-modal-body h3 {
+    margin: 10px 0 15px;
+    font-size: 30px;
+}
+
+.project-modal-body p {
+    color: #94a3b8;
+    line-height: 1.8;
+}
+
+.project-modal-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.project-modal-tech span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border: 1px solid #334155;
+    border-radius: 7px;
+    color: #cbd5e1;
+    font-size: 13px;
+}
+
+.project-modal-tech svg {
+    color: #38bdf8;
+}
+
+.project-modal-github {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #38bdf8;
+    border-radius: 7px;
+    color: #38bdf8;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-modal-github:hover {
+    transform: translateY(-3px);
+    background: #38bdf8;
+    color: #020617;
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #475569;
+    border-radius: 50%;
+    background: rgba(2, 6, 23, 0.75);
+    color: #f8fafc;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.project-modal-close:hover {
+    transform: rotate(90deg);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-modal {
+        padding: 15px;
+    }
+
+    .project-modal-content > img {
+        height: 190px;
+    }
+
+    .project-modal-body {
+        padding: 22px;
+    }
+
+    .project-modal-body h3 {
+        font-size: 24px;
+    }
+}
+.education-container {
+    position: relative;
+}
+
+.education-line {
+    transition: height 1.5s ease;
+}
+
+.education-item {
+    transition: transform 0.4s ease;
+}
+
+.education-item:hover {
+    transform: translateX(6px);
+}
+
+.education-marker {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.education-item:hover .education-marker {
+    transform: scale(1.15);
+    box-shadow:
+        0 0 0 8px rgba(56, 189, 248, 0.06),
+        0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.education-marker span {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.education-item:hover .education-marker span {
+    transform: scale(1.25);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.7);
+}
+
+.education-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.education-card::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.1),
+        transparent 70%
+    );
+    transition: transform 0.6s ease;
+    pointer-events: none;
+}
+
+.education-item:hover .education-card {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(56, 189, 248, 0.05);
+}
+
+.education-item:hover .education-card::before {
+    transform: scale(1.5);
+}
+
+.education-status {
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.education-item:hover .education-status {
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.4);
+}
+
+.education-focus span {
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.education-focus span:hover {
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
