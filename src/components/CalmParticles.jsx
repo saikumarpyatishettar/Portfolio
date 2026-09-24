@@ -24,7 +24,29 @@ function CalmParticles() {
             container.appendChild(particle)
         }
 
+        const handleMouseMove = (event) => {
+            const mouseX = event.clientX / window.innerWidth - 0.5
+            const mouseY = event.clientY / window.innerHeight - 0.5
+
+            particles.forEach((particle, index) => {
+                const strength = (index % 5 + 1) * 4
+
+                particle.style.setProperty(
+                    "--mouse-x",
+                    `${mouseX * strength}px`
+                )
+
+                particle.style.setProperty(
+                    "--mouse-y",
+                    `${mouseY * strength}px`
+                )
+            })
+        }
+
+        window.addEventListener("mousemove", handleMouseMove)
+
         return () => {
+            window.removeEventListener("mousemove", handleMouseMove)
             particles.forEach((particle) => particle.remove())
         }
     }, [])

@@ -3159,41 +3159,40 @@ body::before {
     inset: 0;
     pointer-events: none;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
 }
 
 .calm-particle {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background: #38bdf8;
-    box-shadow: 0 0 12px #38bdf8;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
     animation: particleFloat 8s ease-in-out infinite alternate;
+    transition: transform 1s ease-out;
 }
 
 @keyframes particleFloat {
     0% {
-        transform: translate(0, 0);
+        transform: translate(var(--mouse-x, 0px), var(--mouse-y, 0px));
         opacity: 0.25;
     }
 
     50% {
-        transform: translate(25px, -20px);
-        opacity: 0.9;
+        opacity: 0.75;
     }
 
     100% {
-        transform: translate(50px, -40px);
-        opacity: 0.35;
+        transform:
+            translate(
+                calc(35px + var(--mouse-x, 0px)),
+                calc(-30px + var(--mouse-y, 0px))
+            );
+        opacity: 0.3;
     }
 }
 
-@media (max-width: 768px) {
-    .calm-particles {
-        display: none;
-    }
-}
 .hero,
 .navbar,
 .about,
@@ -3205,7 +3204,8 @@ body::before {
 .footer {
     position: relative;
     z-index: 1;
-}   
+}
+
 .hero-background {
     z-index: 0;
 }
@@ -3214,4 +3214,51 @@ body::before {
 .hero-scroll {
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .calm-particles {
+        display: none;
+    }
+}
+.hero-photo-card {
+    position: relative;
+    z-index: 3;
+    transform-style: preserve-3d;
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.hero-photo-card:hover {
+    transform:
+        perspective(900px)
+        rotateX(4deg)
+        rotateY(-5deg)
+        translateY(-8px);
+}
+
+.hero-photo-card::after {
+    content: "";
+    position: absolute;
+    inset: -10px;
+    border-radius: 24px;
+    background: radial-gradient(
+        circle,
+        rgba(56, 189, 248, 0.18),
+        transparent 70%
+    );
+    filter: blur(18px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease;
+}
+
+.hero-photo-card:hover::after {
+    opacity: 1;
+}
+
+.hero-photo-card img {
+    display: block;
+    transform: translateZ(15px);
 }
