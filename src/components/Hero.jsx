@@ -86,11 +86,13 @@ function Hero() {
                         <div className="image-ring ring-one"></div>
                         <div className="image-ring ring-two"></div>
 
-                        <div className="hero-photo">
+                        <div className="hero-photo-card">
+                            <div className="hero-photo">
                             <img
                                 src="/profile.png"
                                 alt="Sai Kumar"
                             />
+                            </div>
                         </div>
 
                         <div className="floating-card card-top">
