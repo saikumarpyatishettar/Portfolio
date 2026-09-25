@@ -1,16 +1,85 @@
-# React + Vite
+# 🚀 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
 
-Currently, two official plugins are available:
+<img src="https://img.shields.io/badge/PORTFOLIO-React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<img src="https://img.shields.io/badge/FRONTEND-React-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
 
-## React Compiler
+<img src="https://img.shields.io/badge/UI-CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img src="https://img.shields.io/badge/BUILD-Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 
-## Expanding the ESLint configuration
+</p>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<p align="center">
+  A modern personal portfolio website built to showcase my development journey, technical skills, projects, education, and achievements.
+</p>
+
+---
+
+## ✨ Features
+
+- Responsive portfolio design
+- Modern dark-themed interface
+- Interactive hero section
+- Animated UI interactions
+- Skills showcase
+- Project showcase with previews
+- Project details modal
+- Education timeline
+- Achievements section
+- Contact section
+- Resume access
+- Responsive mobile navigation
+- Smooth scrolling
+- Scroll-to-top functionality
+- Accessibility-friendly motion preferences
+
+## 🛠️ Tech Stack
+
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- React Icons
+- Git & GitHub
+
+## 📂 Projects
+
+### Energy Consumption Tracker
+
+A web application designed to help households monitor and understand their energy consumption.
+
+### Smart Campus Information System
+
+A system designed to provide useful campus information and services for students.
+
+### World of Snakes
+
+A browser-based snake game built with Python and Pygame featuring a futuristic interface and interactive gameplay.
+
+## 🎓 Education
+
+**B.E. Computer Science Engineering**
+
+Dayananda Sagar College of Engineering
+
+2025 — Present
+
+## 🌐 Live Portfolio
+
+https://sai-kumar-portfolio.onrender.com/
+
+## 📬 Contact
+
+**Email:** saikumarpyatishettar@gmail.com
+
+**GitHub:** https://github.com/saikumarpyatishettar
+
+**LinkedIn:** https://www.linkedin.com/in/sai-kumar-m-p-b31073433/
+
+## 📄 License
+
+This project is created for personal portfolio and educational purposes.
